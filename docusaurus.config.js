@@ -6,29 +6,35 @@
  */
 
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'MyRocks',
+  tagline: 'A RocksDB storage engine with MySQL',
+  url: 'https://myrocks.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'myrocks', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'MyRocks',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'MyRocks Logo',
+        src: 'img/logo.svg'
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'docs/getting-started', label: 'Docs', position: 'right' },
+        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
-          position: 'right',
+          position: 'right'
         },
-      ],
+        { to: 'support', label: 'Support', position: 'right' },
+        {
+          href: 'https://www.facebook.com/groups/myrocks/',
+          label: 'Facebook',
+          position: 'right'
+        }
+      ]
     },
     footer: {
       style: 'dark',
@@ -38,47 +44,47 @@ module.exports = {
           items: [
             {
               label: 'Docs',
-              to: 'docs/doc1',
-            },
-          ],
+              to: 'docs/doc1'
+            }
+          ]
         },
         {
           title: 'Community',
           items: [
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-          ],
+              href: 'https://discordapp.com/invite/docusaurus'
+            }
+          ]
         },
         {
           title: 'Social',
           items: [
             {
               label: 'Blog',
-              to: 'blog',
-            },
-          ],
-        },
+              to: 'blog'
+            }
+          ]
+        }
       ],
       logo: {
         alt: 'Facebook Open Source Logo',
-        src: 'https://docusaurus.io/img/oss_logo.png',
+        src: 'https://docusaurus.io/img/oss_logo.png'
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`
+    }
   },
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js')
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
+  ]
 };
